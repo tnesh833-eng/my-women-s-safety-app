@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpowerHer: Comprehensive Women's Safety, Legal Rights & Emergency Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- SIGN-IN POPUP OVERLAY WITH GOOGLE LOGIN COMPONENT -->
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-card">
+            <div class="cute-logo"></div>
+            <h2>Cancelled - Welcome to EmpowerHer</h2>
+            <p>Please log in securely to access your personal proximity network dashboard.</p>
+            
+            <form onsubmit="bypassLogin(event)">
+                <div class="input-group">
+                    <label for="username">Username / Email</label>
+                    <input type="text" id="username" placeholder="Enter your registered account" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="input-group">
+                    <label for="aadhaar">Aadhaar Number</label>
+                    <input type="text" id="aadhaar" placeholder="Enter your Aadhaar number" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Security Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="login-submit-btn">Secure Login</button>
+            </form>
+
+            <div class="divider">or</div>
+
+            <!-- Google Authentication Option -->
+            <button class="google-login-btn" onclick="bypassLogin(event)">
+                <svg class="google-icon" viewBox="0 0 24 24" width="100%" height="100%">
+                    <path fill="#EA4335" d="M5.266 9.765A7.077 7.077 0 0 1 12 4.909c1.69 0 3.218.6 4.418 1.582L19.91 3C17.782 1.145 15.055 0 12 0 7.33 0 3.357 2.673 1.44 6.586l3.826 3.179z"/>
+                    <path fill="#4285F4" d="M23.49 12.275c0-.796-.073-1.564-.205-2.302H12v4.358h6.442a5.503 5.503 0 0 1-2.387 3.614l3.722 2.885c2.177-2.005 3.433-4.96 3.433-8.555z"/>
+                    <path fill="#FBBC05" d="M1.44 6.586A6.977 6.977 0 0 0 1 12c0 1.93.4 3.77 1.114 5.448l3.945-3.057A6.945 6.945 0 0 1 5.09 12c0-1.954.514-3.79 1.41-5.414L1.44 6.586z"/>
+                    <path fill="#34A853" d="M12 24c3.24 0 5.973-1.078 7.964-2.925l-3.722-2.885c-1.03.69-2.345 1.102-4.242 1.102-3.264 0-6.032-2.204-7.023-5.178L1.032 17.17A11.938 11.938 0 0 0 12 24z"/>
+                </svg>
+                Sign in with Google
+            </button>
+        </div>
+    </div>
+
+    <div class="top-banner">
+        ⚠️ EMERGENCY SHORTCUT: Bookmark this file on your mobile home screen for 1-tap local panic alarm access.[cite: 1]
+    </div>
+
+    <!-- LOGO HEADER -->
+    <div class="logo-container">
+        <div class="cute-logo"></div>
+        <span style="font-weight:800; font-size:1.4rem; color:white; letter-spacing:0.5px;">Empower<span style="color:var(--cute-pink)">Her</span></span>
+    </div>
+
+    <section class="hero">
+        <h1>Women’s Safety, Rights & Protection Portal</h1>
+        <p>A comprehensive strategic resource addressing structural vulnerabilities, legal rights, workplace inequalities, and immediate personal defense safety tools.[cite: 1]</p>
+        <img src="safety-photo.png" alt="Women safety illustration" class="hero-image">
+    </section>
+
+    <div class="main-content">
+        <!-- EMERGENCY PANIC ALARM MODULE -->
+        <div class="panic-container" id="panicContainer">
+            <h2>High-Velocity Acoustic Deterrent</h2>
+            <p>In immediate danger? Press the button below. It emits a high-frequency, air-speed alternating acoustic siren designed to disorient attackers and attract immediate public assistance.[cite: 1]</p>
+            <button class="alarm-btn" id="panicButton" onclick="toggleEmergencyAlarm()">Trigger<br>Alarm</button>
+            <div style="margin-top: 1rem; font-size: 0.85rem; color: #f472b6; font-weight: 600;" id="alarmStatus">
+                Status: Alarm Ready[cite: 1]
+            </div>
+        </div>
+
+        <!-- SECURE PROXIMITY NETWORK HUB -->
+        <div id="contact-hub" class="section-card" style="border-color: var(--cute-pink);">
+            <h2 style="border-left-color: var(--cute-pink);">🛰️ Secure Proximity Network Hub</h2>
+            <p>Your local protective communication system is successfully armed. Based on your current system location coordinates, you can access instant emergency speed-dials to nearby safety departments and your custom emergency circles.</p>
+            
+            <div class="contact-hub-grid">
+                
+                <!-- Category A: Nearest Stations -->
+                <div class="contact-category">
+                    <h3>🏢 Nearest Police Stations</h3>
+                    
+                    <div class="contact-row">
+                        <div class="contact-info">
+                            <span class="name">Central Protection Command</span>
+                            <span class="detail">Distance: 0.8 km away • Active Mobile Unit</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="tel:112" class="circle-action-btn btn-call" title="Call Command">📞</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-row">
+                        <div class="contact-info">
+                            <span class="name">Metro District Precinct Station</span>
+                            <span class="detail">Distance: 2.3 km away • Response Center</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="tel:1091" class="circle-action-btn btn-call" title="Call Precinct">📞</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category B: Parents -->
+                <div class="contact-category">
+                    <h3>🏡 Primary Parents Contact</h3>
+                    <div class="contact-row">
+                        <div class="contact-info">
+                            <span class="name">Home Core Contact (Mom / Dad)</span>
+                            <span class="detail">Emergency Backup Destination Circle</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="tel:5550199" class="circle-action-btn btn-call">📞</a>
+                            <a href="sms:5550199?body=Emergency!%20I%20need%20help.%20Please%20check%20my%20last%20location." class="circle-action-btn btn-sms">💬</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category C: Friends Network -->
+                <div class="contact-category">
+                    <h3>✨ Friends Circle Contacts</h3>
+                    
+                    <div class="contact-row">
+                        <div class="contact-info">
+                            <span class="name">Sarah (Trusted Inner Buddy)</span>
+                            <span class="detail">Assigned Digital Safety Escort</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="tel:5550143" class="circle-action-btn btn-call">📞</a>
+                            <a href="sms:5550143?body=SOS!%20Please%20track%20me." class="circle-action-btn btn-sms">💬</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-row">
+                        <div class="contact-info">
+                            <span class="name">Elena (Secondary Network)</span>
+                            <span class="detail">Proximity Alert Circle Partner</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="tel:5550177" class="circle-action-btn btn-call">📞</a>
+                            <a href="sms:5550177?body=SOS!%20Please%20track%20me." class="circle-action-btn btn-sms">💬</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category D: Relatives -->
+                <div class="contact-category">
+                    <h3>🧬 Family Relatives Group</h3>
+                    <div class="contact-row">
+                        <div class="contact-info">
+                            <span class="name">Uncle Marcus / Guardian</span>
+                            <span class="detail">Regional Support Contact Node</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="tel:5550121" class="circle-action-btn btn-call">📞</a>
+                            <a href="sms:5550121?body=Urgent%20Safety%20Alert!" class="circle-action-btn btn-sms">💬</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- QUICK LINKS NAV -->
+        <div class="grid-nav">
+            <a href="#vulnerabilities" class="nav-link">Structural Inequalities</a>
+            <a href="#legal-rights" class="nav-link">Constitutional & Legal Rights</a>
+            <a href="#safety-protocols" class="nav-link">Personal Protection Strategies</a>
+            <a href="#helplines" class="nav-link">National Hotlines & Crisis Networks</a>
+            <a href="#feedback" class="nav-link">Portal Feedback</a>
+        </div>
+
+        <!-- SECTION 1: VULNERABILITIES -->
+        <div id="vulnerabilities" class="section-card">
+            <h2>1. Addressing the Contrast: Structural Inequalities & Realities</h2>
+            <p>Even in states boasting exceptional institutional health markers, high female literacy rates, and advanced welfare delivery frameworks, localized structural friction points persist. True safety cannot exist without balancing systemic socioeconomic power structures.[cite: 1]</p>
+            <h3>The Informal Sector Wage Disparity</h3>
+            <p>The informal labor sector—including domestic work, construction, small-scale farming, and unorganized piece-rate manufacturing—employers over 80% of working women. In these spaces, regulatory oversight is minimal, leading to significant challenges:[cite: 1]</p>
+            <ul class="safety-list" style="margin-bottom: 1.5rem;">
+                <li><strong>Unregulated Piece-Rate Pay:</strong> Women are routinely paid 20% to 35% less than male counterparts for identical physical or manual labor under the false pretext of structural differences in work output.[cite: 1]</li>
+                <li><strong>Absence of Maternity & Social Buffers:</strong> Due to lack of formal contracts, taking time off for childbirth or family health emergencies frequently results in immediate termination, pushing women into high-interest debt traps.[cite: 1]</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 2: LEGAL RIGHTS -->
+        <div id="legal-rights" class="section-card">
+            <h2>2. Comprehensive Legal & Institutional Safeguards</h2>
+            <p>Knowledge is a powerful armor. Every woman must be deeply familiar with the statutory protections enacted to protect her bodily autonomy, dignity, and workplace parity.[cite: 1]</p>
+            <ul class="rights-list">
+                <li><strong>The Protection of Women from Domestic Violence Act:</strong> Goes beyond physical violence to explicitly outlaw emotional, verbal, economic, and sexual abuse. It secures a woman’s legal right to reside in her shared matrimonial household, regardless of its legal ownership status.[cite: 1]</li>
+                <li><strong>The POSH Act (Prevention of Sexual Harassment at Workplace):</strong> Mandates that every single organization with 10 or more employees must establish an independent Internal Complaints Committee (ICC). This committee must be headed by a woman and include external anti-harassment experts to ensure unbiased, swift corporate trials.[cite: 1]</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 3: SAFETY PROTOCOLS -->
+        <div id="safety-protocols" class="section-card">
+            <h2>3. Multi-Situation Personal Safety & Defense Blueprint</h2>
+            <p>While fighting for long-term systemic equality, everyday environments require immediate, proactive tactics to stay safe from sudden external threats.[cite: 1]</p>
+            <h3>Public Spaces & Commuting</h3>
+            <ul class="safety-list">
+                <li><strong>The Perimeter Strategy:</strong> When utilizing public transportation late at night, always position yourself near the driver, conductor, or within designated women-only compartments. Avoid completely isolated or empty train cars/buses.[cite: 1]</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 4: HELPLINES -->
+        <div id="helplines" class="section-card">
+            <h2>4. Rapid Crisis & Emergency Response Contacts</h2>
+            <p>Keep these vital national and regional emergency lines memorized or saved on your speed dial profiles for immediate intervention.[cite: 1]</p>
+            <table class="hotline-table">
+                <thead>
+                    <tr>
+                        <th>Emergency Support Service</th>
+                        <th>Hotline Numbers</th>
+                        <th>Operational Window</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>National All-in-One Emergency Response</strong></td>
+                        <td><a href="tel:112" class="phone-num">112</a></td>
+                        <td>24 Hours / 7 Days[cite: 1]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Women Helpline Support Channel</strong></td>
+                        <td><a href="tel:1091" class="phone-num">1091</a></td>
+                        <td>24 Hours / 7 Days[cite: 1]</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- NEW SECTION 5: APP FEEDBACK MANAGEMENT -->
+        <div id="feedback" class="section-card" style="border-color: var(--cute-purple);">
+            <h2 style="border-left-color: var(--cute-purple);">📝 Help Us Improve: Portal Feedback</h2>
+            <p>Your security experience dictates our interface roadmaps. Use this encrypted pipeline to file UI critiques, map error logs, or recommend critical functional modules.</p>
+            
+            <form class="feedback-form" onsubmit="handleFeedbackSubmit(event)">
+                <div class="form-row-split">
+                    <div class="input-group">
+                        <label for="feedback-name">Your Name (Optional)</label>
+                        <input type="text" id="feedback-name" placeholder="Anonymous or Alias">
+                    </div>
+                    <div class="input-group">
+                        <label for="feedback-email">Your Email (Optional)</label>
+                        <input type="email" id="feedback-email" placeholder="tnesh833@gmail.com" value="tnesh833@gmail.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="feedback-category">Feedback Topic</label>
+                        <select id="feedback-category" required>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="emergency-tools">Emergency Tools / Panic Button</option>
+                            <option value="contacts-hub">Proximity Station & Circles Hub</option>
+                            <option value="legal-resources">Legal Rights Information Accuracy</option>
+                            <option value="ui-ux">Interface & Cute Design Styling</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="feedback-message">Details / Suggestions</label>
+                    <textarea id="feedback-message" placeholder="Describe your experience or suggest security features..." required></textarea>
+                </div>
+
+                <button type="submit" class="feedback-submit-btn">Transmit Feedback securely</button>
+            </form>
+
+            <div id="feedbackSuccessToast" class="success-toast">
+                ✨ Thank you! Your safety feedback data was recorded to our design review queue successfully.
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>EmpowerHer Hub • Educational Safety Blueprint & Legal Rights Reference Guide • Developed 2026[cite: 1]</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
